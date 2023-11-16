@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../Images/harvoxx.png';
+import logo from '../Images/logo.png';
 import { Link} from "react-router-dom";
 import { FaFacebook } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";

@@ -11,7 +11,9 @@ const Enroll = (props) => {
                 <button type="button">{props.title}</button>
                 <h2>{props.subtitle}</h2>
                 <p>{props.para}</p>
-                <Link to={props.reg} ><button type="button" className='enrollment' >{props.btn}</button></Link>
+                <Link to={props.noLink ? "#":props.reg} >
+                  <button type="button" className='enrollment' >{props.btn}</button>
+                  </Link>
 
             </div>
             <div>

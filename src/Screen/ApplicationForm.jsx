@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import logo from "../Images/harvoxx.png";
+import logo from "../Images/logo.png";
 import pix from "../Images/business-3d-three-young-women-with-phones 1.png";
 import shape from "../Images/Ellipse 11.png";
 import { Link, useNavigate } from "react-router-dom";

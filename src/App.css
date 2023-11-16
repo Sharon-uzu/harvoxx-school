@@ -2,6 +2,14 @@
 .no-scroll {
   overflow: hidden;
 }
+
+@media screen and (max-width:1100px){
+.hero-image{
+  display:none
+}
+}
+
+
 *{
   padding: 0;
   margin: 0;
@@ -52,7 +60,7 @@ a{
   width:30%;
 }
 .navbar nav .logo img{
-  width:25%;
+  width:50%;
   /* object-fit: contain; */
 }
 .navbar nav ul{
@@ -96,7 +104,7 @@ a{
 }
 
 .foot img{
-  width: 40%;
+  width: 100%;
 }
 
 .foot footer div h4{
@@ -135,14 +143,14 @@ a{
 .slide img{
   object-fit: contain;
   /* background-color: #DEA729; */
-  width: 60%;
+  width: 40%;
   
 }
 
 .slide .acc{
   /* object-fit: cover; */
   /* height: 40px; */
-  width: 70%;
+  width: 40%;
   
 }
 
@@ -165,7 +173,7 @@ a{
 }
 
 .emp h1{
-  width: 50%;
+  width: 90%;
   margin: auto;
   margin-top: 20px;
   font-size: 50px;
@@ -175,7 +183,7 @@ a{
 
 }
 .emp p{
-  width: 30%;
+  width: 80%;
   margin: auto;
   margin-top: 10px;
   font-size: 18px;
@@ -730,7 +738,7 @@ a{
   object-fit: contain;
   /* background-color: #DEA729; */
   height: auto;
-  width: 80%;
+  width: 40%;
 }
 
 .memories .enrollment{
@@ -784,13 +792,13 @@ a{
 }
 
 .application .form-text .logo{
-  width: 90%;
+  width: 50%;
   margin: auto;
   text-align: start;
 }
 
 .application .form-text .logo img{
-  width: 17%;
+  width: 77%;
   object-fit: contain;
   margin-bottom: 20px;
 }
@@ -821,7 +829,8 @@ a{
 }
 .application .form-text .pix1 img{
   width: 70%;
-  height: 100%;
+  margin-top:90px
+  /* height: 100%; */
 }
 .application .form-text .pix2{
   width: 100%;
@@ -1234,7 +1243,7 @@ input[type="date"] {
   }
 
   .navbar nav .logo img{
-    width:60%;
+    width:100%;
   }
 
   /* Slider */
@@ -1243,12 +1252,12 @@ input[type="date"] {
 }
 
 .slide img{
-  width: 80%;
-  height: 120px;
+  width: 40%;
+  height: 60px;
 }
 
 .slide .acc{
-  width: 80%;
+  width: 40%;
   
 }
 
@@ -1585,7 +1594,7 @@ input[type="date"] {
 }
 
 .memories .slide img{
-  width: 100%;
+  width: 40%;
  
 }
 .memories .gallery img{
