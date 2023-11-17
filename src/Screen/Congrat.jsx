@@ -8,10 +8,10 @@ const Congrat = () => {
     <div>
         <Navbar/>
         <div className='congrat'>
-            <h3>Congratulations 🎉👏🎊 You have Successfully enrolled for this DSP 300 program</h3>
+            <h3>Congratulations 🎉👏🎊 You have successfully applied for the Cohort-3 DSP 300 program.</h3>
             <img src={celebrate} alt="Congratulations" />
-            <p>Keep an eye on your Email address your would be notified once you are selected for the program</p>
-            <button type="button">Spread the Good News</button>
+            <p>Keep an eye on your Email address, selected candidates would receive an email on January 10th, 2024.</p>
+            <a href="https://www.facebook.com/HarvoxxOfficial?mibextid=ZbWKwL" target='_blank'><button type="button">Get More Updates</button></a>
         </div>
 
         <Footer/>

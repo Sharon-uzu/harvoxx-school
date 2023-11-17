@@ -72,13 +72,18 @@ const CountDown = (props) => {
                 
             </div>
                 
-            <div className='count-c'>
+            <div className='count-c count-l' >
                 <div>
                     <h2>{seconds.toString().padStart(2, '0')}</h2>
+                    
                 </div>
+
                 <p>Seconds</p>
                 
             </div>
+
+
+              
         </div>
         
     </div>

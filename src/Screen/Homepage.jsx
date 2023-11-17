@@ -13,37 +13,123 @@ import { Link } from 'react-router-dom';
 import Contact from '../ComponentsFolder/Contact';
 import SluderStartup2 from '../ComponentsFolder/SluderStartup2';
 import dsp100 from '../Images/dsp100.jpg'
-import train from '../Images/train.jpg'
+import train from '../Images/train.jpg';
+
+
 
 
 const Homepage = () => {
     return (
         <div>
             <Navbar />
-            <div className='emp'>
 
-                <div style={{
+            <div className='emp'>
+            <button type="button">Empowering the next tech force</button>
+
+            <h1>Unlock Opportunities with Digital Skills</h1>
+            <p><b>Cultivating Tommorrow's Tech Innovators:</b> We empower you with the skills you need to forge and nurture the career of your dreams.</p>
+            <a href="#programs"><button type='button' className='explore'>Explore programmes</button></a>
+
+            
+        </div>
+            {/* <div className='emp'>
+
+                 <div style={{
                     display: "flex",
                     flexDirection: "row",
-                    justifyContent: "space-between"
+                    justifyContent: "space-around",
                 }} >
-                    <div style={{ flex: 1, backgroundColor: " ",paddingLeft:30 }} >
+                    <div style={{ flex: 1, backgroundColor: " ",paddingLeft:40 }} >
                         <button type="button">Empowering the next tech force</button>
                         <h1>Unlock Opportunities with Digital Skills</h1>
                         <p><b>Cultivating Tommorrow's Tech Innovators:</b> We empower you with the skills you need to forge and nurture the career of your dreams.</p>
                         <a href="#programs"><button type='button' className='explore'>Explore programmes</button></a>
                     </div>
                     <div style={{ flex: 0.8, backgroundColor: "  ",padding:20 }} className='hero-image'  >
+                        
                         <img src={dsp100} alt="" style={{width:"80%"}} />
+
+                        
                     </div>
-                </div>
+                </div> 
 
 
                 <h2>Tools</h2><br />
                 <Slider />
-            </div>
+            </div> */}
 
-            <div className="prog" id='programs'>
+                    <div className="why">
+
+                    <h1>Why Harvoxx School</h1>
+
+                    <div className='why-flex'>
+
+                        <div className='left'>
+                            <h3>Where Aspirations Takes <span style={{ color: '#2D378E' }}>Flight</span>. <br /> Unleash your potentials with our well designed learning <span style={{ color: '#E05476' }}>experiences</span> in <span style={{ color: '#DEA729' }}>Harvoxx School.</span></h3>
+                            <div className='list'>
+                                <div>
+                                    <h6>2000+</h6>
+                                    <p>Students</p>
+
+                                </div>
+
+                                <div>
+                                    <h6>15+</h6>
+                                    <p>Instructors</p>
+                                </div>
+
+                                <div>
+                                    <h6>10+</h6>
+                                    <p>Packages</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div className='right'>
+
+                            <div className='why-card' style={{ background: '#DDDDDD1A' }}>
+                                <img src={one} alt="" />
+                                <h5>Physical classes</h5>
+                                <p>Engage in dynamic learning environments with our on-site classes, fostering collaboration and hands-on experience for an immersive educational journey.</p>
+
+                            </div>
+
+                            <div className='why-card' style={{ background: '#D6A95F1A' }}>
+                                <img src={two} alt="" />
+                                <h5>Hands-on practical</h5>
+                                <p>Experience learning through doing. Our hands-on approach ensures practical mastery, empowering you to confidently apply skills in real-world scenarios.</p>
+
+
+                            </div>
+
+                            <div className='why-card' style={{ background: '#B2B0F71A' }}>
+                                <img src={three} alt="" />
+                                <h5>Custom BootCamps</h5>
+                                <p>Tailor your learning journey with personalized bootcamps, designed to meet your unique goals, offering flexibility and targeted skill development for accelerated growth.</p>
+
+
+                            </div>
+
+                            <div className='why-card' style={{ background: '#FFA9DC1A' }}>
+                                <img src={four} alt="" />
+                                <h5>Community Support</h5>
+                                <p>Join a thriving community of learners. Our support network ensures you're never alone, fostering collaboration, mentorship, and shared success within the Harvoxx School family.</p>
+
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+                    </div>
+
+             <div className="prog" id='programs'>
                 <h3>Our Program</h3>
                 <p>We equip you with tech skills to forge the career of your dreams.</p>
 
@@ -90,85 +176,7 @@ const Homepage = () => {
                 </div>
             </div>
 
-            <div className="why">
-
-                <h1>Why Harvoxx School</h1>
-
-                <div className='why-flex'>
-
-                    <div className='left'>
-                        <h3>Where Aspirations Takes <span style={{ color: '#2D378E' }}>Flight</span>. <br /> Unleash your potentials with our well designed learning <span style={{ color: '#E05476' }}>experiences</span> in <span style={{ color: '#DEA729' }}>Harvoxx School.</span></h3>
-                        <div className='list'>
-                            <div>
-                                <h6>2000+</h6>
-                                <p>Students</p>
-
-                            </div>
-
-                            <div>
-                                <h6>15+</h6>
-                                <p>Instructors</p>
-                            </div>
-
-                            <div>
-                                <h6>10+</h6>
-                                <p>Packages</p>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-                    <div className='right'>
-
-                        <div className='why-card' style={{ background: '#DDDDDD1A' }}>
-                            <img src={one} alt="" />
-                            <h5>Physical classes</h5>
-                            <p>Engage in dynamic learning environments with our on-site classes, fostering collaboration and hands-on experience for an immersive educational journey.</p>
-
-                        </div>
-
-                        <div className='why-card' style={{ background: '#D6A95F1A' }}>
-                            <img src={two} alt="" />
-                            <h5>Hands-on practical</h5>
-                            <p>Experience learning through doing. Our hands-on approach ensures practical mastery, empowering you to confidently apply skills in real-world scenarios.</p>
-
-
-                        </div>
-
-                        <div className='why-card' style={{ background: '#B2B0F71A' }}>
-                            <img src={three} alt="" />
-                            <h5>Custom BootCamps</h5>
-                            <p>Tailor your learning journey with personalized bootcamps, designed to meet your unique goals, offering flexibility and targeted skill development for accelerated growth.</p>
-
-
-                        </div>
-
-                        <div className='why-card' style={{ background: '#FFA9DC1A' }}>
-                            <img src={four} alt="" />
-                            <h5>Community Support</h5>
-                            <p>Join a thriving community of learners. Our support network ensures you're never alone, fostering collaboration, mentorship, and shared success within the Harvoxx School family.</p>
-
-
-                        </div>
-
-
-                    </div>
-
-                </div>
-
-
-            </div>
-
-
-            <div className="where">
-                <h2>Emerging Startups From Our Training</h2><br />
-
-                <SliderStartup />
-                <SluderStartup2 />
-            </div>
-
+            
 
             <div className="learners">
                 <div className='learners-flex'>
@@ -182,6 +190,22 @@ const Homepage = () => {
 
                 </div>
             </div>
+
+
+            <div className="where">
+                <h2>Emerging Startups From Our Training</h2><br />
+
+                <SliderStartup />
+                <SluderStartup2 />
+            </div>
+
+
+            <div className='emp'>
+                <h2>Tools We Train On</h2><br />
+                <Slider/>
+            </div>
+
+            
 
             <Contact />
 

@@ -24,7 +24,7 @@ const MultiCarousel = () => {
         pagination={{ clickable: true }}
         // navigation={true}
         autoplay={{
-          delay: 2500,
+          delay: 6000,
           disableOnInteraction: false,
         }}
         style={{ zIndex: 1 }}

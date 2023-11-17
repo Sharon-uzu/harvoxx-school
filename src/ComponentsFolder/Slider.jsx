@@ -8,6 +8,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+import 'swiper/css/effect-fade';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import slide1 from '../Images/html.png'
 import slide2 from '../Images/css.png'
@@ -39,6 +40,7 @@ const Slider = () => {
         modules={[Autoplay, Navigation, Pagination, Scrollbar, A11y]}
         spaceBetween={20}
         slidesPerView={4}
+       
         // pagination={{ clickable: true }}
         // navigation={true}
         autoplay={{

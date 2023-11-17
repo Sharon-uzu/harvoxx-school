@@ -16,6 +16,9 @@ import slide4 from '../Images/databyters.jpeg'
 import slide5 from '../Images/dokita.jpeg'
 import slide6 from '../Images/homigon.jpeg'
 import slide7 from '../Images/quickpower.jpeg'
+import slide8 from '../Images/bagify.jpeg'
+import slide9 from '../Images/build.jpeg'
+
 
 
 
@@ -56,6 +59,13 @@ const SliderStartup = () => {
         </SwiperSlide>
         <SwiperSlide>
           <img src={slide7} alt=""/>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <img src={slide8} alt=""/>
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={slide9} alt=""/>
         </SwiperSlide>
     
       </Swiper>

@@ -11,7 +11,8 @@ const Contact = () => {
   const navigate = useNavigate();
 
   const congrat = () => {
-    window.location.reload(false);
+    setIsOpen(false)
+    // window.location.reload(false);
   };
 
 
@@ -77,7 +78,7 @@ const Contact = () => {
       Supabase.from("contact-public")
         .upsert([
           {
-            name: formData.fullname,
+            name: formData.name,
             email: formData.email,
             message: formData.message,
             
@@ -101,7 +102,7 @@ const Contact = () => {
         <div className='contact-form'>
             <div className='inputs' >
             <label htmlFor="name">
-                <input type="text" name="" id="" placeholder='full name' value={formData.name} 
+                <input type="text" name="" id="" placeholder='Full Name' value={formData.name} 
                 onChange={(e) => {
                 setFormData({
                   ...formData,
@@ -114,7 +115,7 @@ const Contact = () => {
               </label>
 
               <label htmlFor="email">
-                <input type="email" name="" id="" placeholder='email' value={formData.email} 
+                <input type="email" name="" id="" placeholder='Email' value={formData.email} 
                  onChange={(e) => {
                   setFormData({
                     ...formData,
@@ -144,15 +145,15 @@ const Contact = () => {
             <div className='info'>
                 <div>
                     <h1>Address</h1>
-                    <p>Elzazi complex, Opposite Westharm petrol station along gbalajam/Akpajo road, woji ( Odili Road, Port-Harcourt )</p>
+                    <p>Elzazi complex, Opposite WesHarm petrol station along gbalajam/Akpajo road, woji ( Odili Road, Port-Harcourt )</p>
 
                 </div>
 
                 <div className='link'>
                     <h1>Email Us</h1>
-                    <p><a href="mailto:hello@harvoxx.com">Hello@harvoxx.com</a></p>
-                    <p><a href="mailto:help@harvoxx.com">Help@harvoxx.com</a></p>
-                    <p><a href="mailto:admin@harvoxx.com">Admin@harvoxx.com</a></p>
+                    <p><a href="mailto:hi@harvoxx.com">Hi@harvoxx.com</a></p>
+                    <p><a href="mailto:partners@harvoxx.com">Partners@harvoxx.com</a></p>
+                    <p><a href="mailto:school@harvoxx.com">School@harvoxx.com</a></p>
                 </div>
 
                 <div className='link'>

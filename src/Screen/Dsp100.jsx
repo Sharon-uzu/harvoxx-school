@@ -15,12 +15,13 @@ const Dsp100 = () => {
     <div>
       <Navbar />
       <Enroll
+      noLink={true}
       type="dsp100"
         reg="/dsp100"
         btnClassName="hidden"
         btn="Cohort 3"
         title="Digital SkillUp Project-100 (DSP-100)"
-        subtitle="Building the next generation of female techies"
+        subtitle="Building The Next Generation Of Female Techies"
         para="Join millions of other ladies around the world breaking biases with their Tech Skills"
       />
       <CountDowndsp100

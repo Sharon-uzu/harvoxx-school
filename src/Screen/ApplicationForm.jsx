@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import logo from "../Images/logo.png";
-import pix from "../Images/business-3d-three-young-women-with-phones 1.png";
+import pix from "../Images/hero-image.jpeg"
 import shape from "../Images/Ellipse 11.png";
 import { Link, useNavigate } from "react-router-dom";
 import { Supabase } from "../config/supabase-config";
@@ -8,11 +8,7 @@ import Modal from "react-modal";
 import { validCodes } from "../utils/Data";
 
 const ApplicationForm = () => {
-  // REACT MODAL
-  const [isOpen, setIsOpen] = useState(false);
-  const toggleModal = () => {
-    setIsOpen(!isOpen);
-  };
+  
 
   // let [formData, setFormData] = useState({});
   const initialValues = {
@@ -42,6 +38,12 @@ const ApplicationForm = () => {
   // code section starts here
 
   const [inputValue, setInputValue] = useState("");
+
+  const navigate = useNavigate();
+  const congrat = () => {
+    navigate("/Congrat");
+  };
+
 
   // Your array of valid codes
   // const isInArray = validCodes.includes(formData.code);
@@ -177,8 +179,8 @@ const validate = (values) => {
                   .then((response) => {
                     console.log("inderted....")
                     console.log(response);
-                    setIsOpen(true);
-                    // navigate("/Congrat");
+                    
+                    navigate("/Congrat");
                   });
               }
             })
@@ -196,15 +198,14 @@ const validate = (values) => {
       ])
       .then((response) => {
         console.log(response);
-        setIsOpen(true);
-        // navigate("/Congrat");
+        navigate("/Congrat");
       });
         }
   return errors;
 };
 
 
-  const navigate = useNavigate();
+ 
 
   const saveItem = () => {
     // setFormErrors(validate(formData));
@@ -224,18 +225,14 @@ const validate = (values) => {
       ])
       .then((response) => {
         console.log(response);
-        setIsOpen(true);
-        // navigate("/Congrat");
+        navigate("/Congrat");
       });
     // console.log(formData)
 
     // return errors;
   };
 
-  const congrat = () => {
-    navigate("/Congrat");
-  };
-
+  
   return (
     <div className="application">
       <div className="form-text">
@@ -244,15 +241,18 @@ const validate = (values) => {
             <img src={logo} alt="" />
           </Link>
         </div>
+        <div className="embrace">
         <h2>
-          "Embrace the power of learning tech skills, for with each new skill
+          "Embrace the power of learning tech skills; for with each new skill
           you acquire, you unlock the door to innovation and shape a brighter
           future for yourself and the world."
         </h2>
-        <div className="pix1">
-          <img src={pix} alt="" />
         </div>
-        <img src={shape} alt="" className="pix2" />
+        
+        <div className="pix1">
+          {/* <img src={pix} alt="" /> */}
+        </div>
+        
       </div>
 
       <div className="formHolder">
@@ -423,39 +423,7 @@ const validate = (values) => {
         </div>
       </div>
 
-      {/* MODAL */}
-      <Modal
-        isOpen={isOpen}
-        onRequestClose={toggleModal}
-        contentLabel="Example Modal"
-        className="two"
-        style={{
-          overlay: {
-            position: "fixed",
-            top: "0px",
-            left: 0,
-            right: 0,
-            bottom: 0,
-            zIndex: 12,
-            // backgroundColor: "hsl(0, 0%, 0%, .5)",
-            backgroundColor: "hsl(0, 0%, 0%, .6)",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          },
-        }}
-      >
-        <div className="confirm">
-          <h1>Requirements</h1>
-          <ul>
-            <li>Laptop</li>
-            <li>Internet Access</li>
-          </ul>
-          <button type="button" onClick={congrat}>
-            Confirm Application
-          </button>
-        </div>
-      </Modal>
+      
     </div>
   );
 };

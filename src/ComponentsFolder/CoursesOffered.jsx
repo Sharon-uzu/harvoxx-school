@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
 import one from '../Images/one.png';
-import img1 from '../Images/prod.jpeg';
-import img2 from '../Images/frontend.png'
+import img1 from '../Images/pro.png';
+import img2 from '../Images/fro.png'
 import img3 from '../Images/data.png'
-import img4 from '../Images/cyber.jpeg'
+import img4 from '../Images/cyber.png'
 import img5 from '../Images/grap.png'
 
 import { Courses } from '../utils/Data';
@@ -106,8 +106,8 @@ const CoursesOffered = () => {
                             <p className='open' onClick={handleClick2}>Learn more</p>
 
                             <b className={click2 ? 'learn-more' : 'moren'} >
-                                <h6 onClick={closeClick2}>X</h6>
-                                <span>ecode the language of data in Data Analytics. Be a digital detective, uncovering valuable insights and patterns hidden within data sets. Learn to make informed decisions that drive business success and innovation.</span>
+                                <h6 onClick={closeClick2} >X</h6>
+                                <span>Decode the language of data in Data Analytics. Be a digital detective, uncovering valuable insights and patterns hidden within data sets. Learn to make informed decisions that drive business success and innovation.</span>
                             </b>
 
                         </div>

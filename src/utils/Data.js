@@ -3,11 +3,11 @@ import img1 from '../Images/one.png';
 import img2 from '../Images/laptop.png'
 import prof from '../Images/5210E951-5C35-46CA-B81E-AAAAA9E2937A - ANTHONY GIFT.jpeg'
 import prof1 from '../Images/princess.770f3180.jpg'
-import prof2 from '../Images/IMG_4605 - Owen Tamuno Gilbert.JPG'
+import prof2 from '../Images/owen.png'
 import prof3 from '../Images/Snapchat-927868823 - jane onwudiwe.jpg'
-import prof4 from '../Images/IMG-20230509-WA0019 - bestone queen.jpg'
-import prof5 from '../Images/IMG_6858 - Racheal Obereniokuma.jpeg'
-import prof6 from '../Images/IMG_3663 - Ndukwu Chimezie.jpeg'
+import prof4 from '../Images/queen.jpeg'
+import prof5 from '../Images/rach.png'
+import prof6 from '../Images/chim.png'
 import prof7 from '../Images/Screenshot_20221218-075837_WhatsAppBusiness - Nwoko Success.jpg'
 import prof8 from '../Images/IMG_20230707_134742_505 - boma ibim.jpg'
 import prof9 from '../Images/Screenshot_20231111-213656_1 - otokini bobmanuel.jpg'
@@ -19,27 +19,19 @@ import prof14 from '../Images/202301251339061000 - Joseph Ogechukwu.jpg'
 import prof15 from '../Images/666384069sst1628068632 - Ruth Geteera.jpg'
 import prof16 from '../Images/IMG_20231019_080637 - chibuike mbeyi.jpg'
 import prof17 from '../Images/DSC_8222 - Friday Melody.gif'
-import prof18 from '../Images/Screenshot_20231006-092001_1 - Chioma Graham.png'
-import prof19 from '../Images/89DA5F44-D9AD-4EE3-BFFD-E974F79AC930 - Gideon Daniel.jpeg'
+import prof18 from '../Images/chioma.jpeg'
+import prof19 from '../Images/g.jpeg'
 import prof20 from '../Images/48dff31b82904408bef799f4c4f69d43 - uche finebone.jpg'
-import prof21 from '../Images/666384069sst1628068632 - Ruth Geteera.jpg'
 import prof22 from '../Images/IMG_20210907_152019_708 - Akuhart Concept.jpg'
 import prof23 from '../Images/IMG-20230711-WA0028 - ikechika divine.jpg'
 import prof24 from '../Images/DSC_5626 - Braide Daniella Biobele.jpg'
 import prof25 from '../Images/FB_IMG_1649233749992 - michael colours.jpg'
-import prof26 from '../Images/IMG_2785 - Ebiowei Peter.jpeg'
+import prof26 from '../Images/ebi.png'
 import prof27 from '../Images/melly.JPG'
 import prof31 from '../Images/sharon1.jpeg'
 
 import prof28 from '../Images/IMG_3234 - Precious Archibong.jpeg'
-import prof29 from '../Images/Compress_20231112_122254_4230 - Confidence Hart.jpg'
-
-
-
-
-
-
-
+import prof29 from '../Images/con.png'
 
 
 
@@ -139,14 +131,7 @@ export const MultiCards= [
     title:'Frontend Developer',
     phone: '09076977885'
   },
-  {
-    id:11,
-    image: prof10,
-    text:"I trained on graphics and design. My experience was awesome. Though, I'm not perfect yet in designs. I'm still open to growing and learning more",
-    name:'Onwudiwe Jane Eberechi ',
-    title:'Graphic Designer',
-    phone: '08141797169'
-  },
+  
   {
     id:12,
     image: prof11,
@@ -227,14 +212,7 @@ export const MultiCards= [
     title:'Backend Developer',
     phone: '08140844803'
   },
-  {
-    id:22,
-    image: prof21,
-    text:"Harvoxx Hub's Digital Marketing training enhanced my skills, providing practical insights into SEO, social media, and analytics. Applying this knowledge has significantly boosted my career.",
-    name:'Geteera Dinebari Ruth ',
-    title:'Digital Marketing',
-    phone: '09015328168'
-  },
+  
   {
     id:23,
     image: prof22,
@@ -414,7 +392,7 @@ export const Faq_100= [
     {
         id:6,
         title:'What is the difference between DSP-100 and DSP-300?',
-        para:'DSP-100 Is a well-structured training on modern and in-demand Tech Skills for 100 female youths in Rivers State. The training is completely free.'
+        para:'DSP-100 is a special well-structured training program on modern and in-demand tech skills for 100 female youths ONLY in Rivers State. DSP-300 on the other hand, comprises both genders in Rivers State. Both training however are COMPLETELY FREE.'
     },
     
 ]
@@ -449,7 +427,7 @@ export const Faq_300= [
     {
         id:6,
         title:'What is the difference between DSP-100 and DSP-300?',
-        para:'DSP-100 Is a well-structured training on modern and in-demand Tech Skills for 100 female youths in Rivers State. The training is completely free.'
+        para:'DSP-100 is a special well-structured training program on modern and in-demand tech skills for 100 female youths ONLY in Rivers State. DSP-300 on the other hand, comprises both genders in Rivers State. Both training however are COMPLETELY FREE.'
     },
     
 ]

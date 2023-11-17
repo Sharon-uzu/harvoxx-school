@@ -1,6 +1,6 @@
 import React from 'react';
-import img1 from '../Images/m26.jpeg'
-import img2 from '../Images/f12.jpeg'
+import img1 from '../Images/m20.jpeg'
+import img2 from '../Images/g12.jpeg'
 
 
 const AboutDsp = (props) => {

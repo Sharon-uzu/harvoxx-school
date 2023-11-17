@@ -3,7 +3,7 @@ import logo from '../Images/logo.png';
 import { Link} from "react-router-dom";
 import { FaFacebook } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
-import { FaInstagram} from "react-icons/fa";
+import { FaLinkedin} from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -17,8 +17,8 @@ const Footer = () => {
                 <ul>
                     <h4>Our Program</h4>
                     
-                    <Link to='/dsp100'><li>DSP 100</li></Link>
-                    <Link to='/dsp300'><li>DSP 100</li></Link>
+                    <Link to='/dsp300'><li>DSP-300</li></Link>
+                    <Link to='/dsp100'><li>DSP-100</li></Link>
                     <a href='https://harvoxx.com'><li>Paid Training</li></a>
                 </ul>
 
@@ -27,9 +27,9 @@ const Footer = () => {
             <div>
                 <ul>
                     <h4>Socials</h4>
-                    <a href=''><li><FaFacebook className='fas'/>Facebook</li></a>
-                    <a href=''><li><FaTwitter className='fas'/> Twitter</li></a>
-                    <a href=''><li><FaInstagram className='fas'/>Instagram</li></a>
+                    <a href='https://www.facebook.com/HarvoxxOfficial?mibextid=ZbWKwL'><li><FaFacebook className='fas'/>Facebook</li></a>
+                    <a href='https://www.linkedin.com/company/harvoxx-tech-hub/'><li><FaLinkedin className='fas'/>LinkedIn</li></a>
+                    <a href='https://twitter.com/HarvoxxH'><li><FaTwitter className='fas'/> Twitter</li></a>
                 </ul>
             </div>
 
