@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, Route, useLocation } from 'react-router-dom';
 import logo from "../Images/logo.png";
 import pix from "../Images/hero-image.jpeg"
 import shape from "../Images/Ellipse 11.png";
@@ -9,6 +10,15 @@ import { validCodes } from "../utils/Data";
 
 const ApplicationForm = () => {
   
+
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    document.body.style.overflow = 'auto'; // Enable scrolling
+
+  }, [pathname]);
+
 
   // let [formData, setFormData] = useState({});
   const initialValues = {
@@ -379,6 +389,7 @@ const validate = (values) => {
               <option value="2">Cybersecurity</option>
               <option value="3">Data Analysis</option>
               <option value="4">Frontend</option>
+              <option value="5">Graphics Design</option>
             </select>
             <p style={{ color: "red", fontSize: "14px" }}>
               {formErrors.course}

@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Route, Link, useLocation } from 'react-router-dom';
 import Enroll from "../ComponentsFolder/Enroll";
 // import CountDown from '../ComponentsFolder/CountDown';
 import AboutDsp from "../ComponentsFolder/AboutDsp";
@@ -11,6 +12,13 @@ import Faq100 from "../ComponentsFolder/Faq100";
 import Contact from "../ComponentsFolder/Contact";
 
 const Dsp100 = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    document.body.style.overflow = 'auto'; // Enable scrolling
+
+  }, [pathname]);
   return (
     <div>
       <Navbar />

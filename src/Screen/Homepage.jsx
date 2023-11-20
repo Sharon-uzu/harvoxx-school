@@ -1,5 +1,5 @@
-import React from 'react';
-import pix1 from '../Images/homi 1.png';
+import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, Route, useLocation } from 'react-router-dom';import pix1 from '../Images/homi 1.png';
 import one from '../Images/phy.jpg'
 import two from '../Images/hands.jpg'
 import three from '../Images/tech-bootcamp-article-1-1.gif'
@@ -19,19 +19,33 @@ import train from '../Images/train.jpg';
 
 
 const Homepage = () => {
+
+    const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    document.body.style.overflow = 'auto'; // Enable scrolling
+
+  }, [pathname]);
+
+
     return (
         <div>
             <Navbar />
 
-            <div className='emp'>
-            <button type="button">Empowering the next tech force</button>
-
-            <h1>Unlock Opportunities with Digital Skills</h1>
-            <p><b>Cultivating Tommorrow's Tech Innovators:</b> We empower you with the skills you need to forge and nurture the career of your dreams.</p>
-            <a href="#programs"><button type='button' className='explore'>Explore programmes</button></a>
+            <div className="hero">
 
             
-        </div>
+                <div className='emp'>
+                    <button type="button">Empowering the next tech force</button>
+
+                    <h1>Unlock Opportunities with Digital Skills</h1>
+                    <p><b>Cultivating Tommorrow's Tech Innovators:</b> We empower you with the skills you need to forge and nurture the career of your dreams.</p>
+                    <a href="#programs"><button type='button' className='explore'>Explore programmes</button></a>
+
+                    
+                </div>
+            </div>
             {/* <div className='emp'>
 
                  <div style={{
@@ -140,7 +154,7 @@ const Homepage = () => {
                         <div className='prog-text'>
                             <h4>Digital SkillUp Project-300(DSP-300)</h4>
                             <p>It is a pioneering initiative under the stewardship of Harvoxx Tech Hub, dedicated to empowering the youth of Rivers State, Nigeria through comprehensive technology training.</p>
-                            <Link to='/dsp300'><a>Learn More</a></Link>
+                            <Link to='/dsp300'><a href='#enrol'>Learn More</a></Link>
 
                         </div>
 
@@ -152,7 +166,7 @@ const Homepage = () => {
                         <div className='prog-text'>
                             <h4>Digital SkillUp Project-100(DSP-100)</h4>
                             <p>Specially designed to empower and uplift young female talents in Rivers State, Nigeria. It is a movement to elevate and empower young women in Rivers State.</p>
-                            <Link to='/dsp100'> <a>Learn More</a></Link>
+                            <Link to='/dsp100'> <a href='#enrol'>Learn More</a></Link>
 
                         </div>
 

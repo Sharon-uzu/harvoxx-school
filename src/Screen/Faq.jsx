@@ -1,10 +1,19 @@
-import React from 'react';
-import { Faqs } from '../utils/Data';
+import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, Route, useLocation } from 'react-router-dom';import { Faqs } from '../utils/Data';
 import Footer from '../ComponentsFolder/Footer';
 import Navbar from '../ComponentsFolder/Navbar';
 
 
 const Faq = () => {
+
+    const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    document.body.style.overflow = 'auto'; // Enable scrolling
+
+  }, [pathname]);
+  
   return (
     <div>
         <Navbar/>

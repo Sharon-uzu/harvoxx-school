@@ -11,16 +11,30 @@ import { RiCloseFill } from "react-icons/ri";
 
 const Navbar = () => {
 
+  const [isDropdownOpen, setDropdownOpen] = useState(false);
+
   const [click, setClick] = useState(false);
   const handleClick = () => {
     setClick(!click);
-    document.body.classList.toggle('no-scroll', !click);
+    setDropdownOpen(!isDropdownOpen);
+    document.body.style.overflow = click ? 'auto' : 'hidden'; // Disable or enable scrolling
+    // document.body.classList.toggle('no-scroll', !click);
+    // document.body.style.overflow = click ? 'auto' : 'hidden'; // Disable or enable scrolling
+
+    
 
   }
+
+  const closeMenuBar = () => {
+    setClick(false);
+    document.body.style.overflow = 'auto'; // Enable scrolling
+
+  };
+
+
   const [activeNav, setActiveNav] = useState('/')
 
 
-  const [isDropdownOpen, setDropdownOpen] = useState(false);
 
   const toggleDropdown = () => {
     setDropdownOpen(!isDropdownOpen);
@@ -39,7 +53,7 @@ const Navbar = () => {
         </div>
 
         <ul className={click ? 'menu active' : 'menu'}>
-          <Link to='/'><li>Home</li></Link>
+          <Link to='/' onClick={closeMenuBar}><li onClick={closeMenuBar}>Home</li></Link>
           {/* <div className="dropdown"> */}
           {/* <li onClick={toggleDropdown} className="dropbtn">Program <MdKeyboardArrowDown/></li> */}
           {/* {isDropdownOpen && <DropdownMenu />} */}
@@ -47,11 +61,11 @@ const Navbar = () => {
           {/* <a href='https://harvoxx.com'><li> Harvoxx School</li></a> */}
           {/* <li>News</li> */}
 
-          <Link to='/DSP300'><li>DSP-300</li></Link>
+          <Link to='/DSP300' onClick={closeMenuBar}><li>DSP-300</li></Link>
 
-          <Link to='/dsp100'><li>DSP-100</li></Link>
+          <Link to='/dsp100' onClick={closeMenuBar}><li>DSP-100</li></Link>
           <a href='https://harvoxx.com'><li>Paid Training</li></a>
-          <a href='#contact'><li>Contact Us</li></a>
+          <a href='#contact' onClick={closeMenuBar}><li>Contact Us</li></a>
 
         </ul>
 

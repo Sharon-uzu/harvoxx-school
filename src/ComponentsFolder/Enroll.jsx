@@ -33,7 +33,7 @@ const Enroll = (props) => {
 
   return (
     <div>
-        <section className='enroll'>
+        <section className='enroll' >
             <div className='txt'>
                 <button type="button">{props.title}</button>
                 <h2>{props.subtitle}</h2>

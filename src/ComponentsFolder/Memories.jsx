@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import { Link } from 'react-router-dom';
 import f2 from '../Images/g1.jpeg'
 import f3 from '../Images/g3.jpeg'
 import f4 from '../Images/g4.jpeg'
@@ -40,14 +39,37 @@ import a9 from '../Images/a9.jpeg'
 import a10 from '../Images/a10.jpeg'
 import a11 from '../Images/a11.jpeg'
 import a12 from '../Images/a12.jpeg'
-
-
-
-
+import {useNavigate, Link } from 'react-router-dom';
+import Modal from "react-modal";
 
 
 
 const Memories = (props) => {
+
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleModal = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const [pop, setPop] = useState(false);
+
+  const handlePop = () =>{
+    setPop(true)
+  }
+
+  const handleClose = () =>{
+    setPop(false)
+  }
+
+  const openModal = () =>{
+    setIsOpen(true);
+  }
+
+  const navigate = useNavigate();
+  const apply = () => {
+    navigate("/form");
+  };
+
 
   const [complete, setComplete] = useState(false);
   const [see, setSee] = useState(true)
@@ -139,9 +161,7 @@ const Memories = (props) => {
               <img src={m21} alt="" />
               <img src={m22} alt="" />
               <img src={m23} alt="" />
-              <img src={m1} alt="" />
-              <img src={m2} alt="" />
-              <img src={m6} alt="" />
+              
 
               </>
               ) : null
@@ -154,7 +174,75 @@ const Memories = (props) => {
         </> 
         </> }
 
-    <Link to='/form'><button type="button" className='enrollment enroll2'>Enroll Now</button></Link>
+
+        {props.type === "dsp100" ? <>
+                <Link to={props.noLink} >
+                  <button type="button" className='enrollment enroll2' onClick={handlePop}>Enroll For Cohort-3</button>
+                  </Link>
+                </>
+                :
+                <>
+                <Link 
+                // to={props.reg}
+                 >
+                  </Link>
+                  <button type="button" className='enrollment enroll2'  onClick={openModal}>Enroll For Cohort-3</button>
+                </>
+                }
+
+
+                {props.type === "dsp100" ? <>
+                    <div className={pop ?  'pop' : 'moren'}>
+                      
+                        <p>DSP-100 Cohort 3 Registration <br /> Commences April 2024. </p>
+                        <button onClick={handleClose}>OK</button>
+        
+                      
+                    </div>
+              
+              </> :
+              null
+              }
+
+      {/* MODAL */}
+      <Modal
+        isOpen={isOpen}
+        onRequestClose={toggleModal}
+        contentLabel="Example Modal"
+        className="two"
+        style={{
+          overlay: {
+            position: "fixed",
+            top: "0px",
+            left: 0,
+            right: 0,
+            bottom: 0,
+            zIndex: 12,
+            // backgroundColor: "hsl(0, 0%, 0%, .5)",
+            backgroundColor: "hsl(0, 0%, 0%, .6)",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          },
+        }}
+      >
+        <div className="confirm">
+          <h3>Hold on!!!</h3>
+          <h4>Before you proceed, kindly note the following:</h4>
+          
+          <ol>
+            <li> You must have a LAPTOP or have access to one.</li>
+            <li> It is a 100% PHYSICAL training. Not online.</li>
+            <li> Training will hold at least TWICE EVERY WEEK for 4 hours daily.</li>
+          </ol>
+          <p>Do You Still Want To Be Part Of This?</p>
+          <button type="button" onClick={apply}>
+            Proceed
+          </button>
+        </div>
+      </Modal>
+
+
 
 
     </div>
